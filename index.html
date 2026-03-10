@@ -9,7 +9,6 @@
         
         * { box-sizing: border-box; font-family: 'Poppins', sans-serif; margin: 0; padding: 0; }
         
-        /* Vibrant Animated Background */
         body { 
             background: linear-gradient(-45deg, #192a56, #273c75, #ff4757, #ff6b81, #5f27cd);
             background-size: 400% 400%;
@@ -18,13 +17,8 @@
             min-height: 100vh; padding: 15px; 
             color: #333;
         }
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
+        @keyframes gradientBG { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
 
-        /* Compact Container */
         .container { 
             background: rgba(255, 255, 255, 0.95); 
             backdrop-filter: blur(20px); 
@@ -32,12 +26,11 @@
             border: 2px solid rgba(255, 255, 255, 0.8);
             padding: 25px 20px; border-radius: 20px; 
             box-shadow: 0 15px 40px rgba(0,0,0,0.3); 
-            width: 100%; max-width: 500px; text-align: center; 
+            width: 100%; max-width: 550px; text-align: center; 
             animation: popIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         }
         @keyframes popIn { 0% { opacity: 0; transform: scale(0.9); } 100% { opacity: 1; transform: scale(1); } }
 
-        /* Smaller Title */
         h1 { 
             background: linear-gradient(to right, #ff4757, #5f27cd, #2ed573);
             -webkit-background-clip: text;
@@ -46,7 +39,6 @@
             text-transform: uppercase; letter-spacing: 1px;
         }
         
-        /* Compact Input Area */
         .mail-generator { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; justify-content: center; }
         .mail-generator input { 
             padding: 10px 15px; border: 2px solid #dfe4ea; border-radius: 12px; font-size: 0.95rem; outline: none; 
@@ -54,7 +46,6 @@
         }
         .mail-generator input:focus { border-color: #5f27cd; box-shadow: 0 0 10px rgba(95, 39, 205, 0.2); }
         
-        /* Compact Dropdown */
         .dropdown { position: relative; width: 100%; max-width: 180px; text-align: left; }
         .dropdown-selected { 
             background: #fff; padding: 10px 15px; border-radius: 12px; border: 2px solid #dfe4ea; 
@@ -73,7 +64,6 @@
         .dropdown-option { padding: 10px 15px; cursor: pointer; border-bottom: 1px solid #f1f2f6; font-weight: 500; font-size: 0.9rem; color: #2f3542; }
         .dropdown-option:hover { background: #f1f2f6; color: #ff4757; padding-left: 20px; }
 
-        /* Smaller Mail Box */
         .mail-box-wrapper { position: relative; margin-bottom: 25px; display: inline-block; width: 100%; }
         .mail-box { 
             background: linear-gradient(135deg, #2f3542 0%, #1e272e 100%);
@@ -85,19 +75,18 @@
         .mail-box:hover::before { transform: translateY(0); }
         .mail-box:active { transform: scale(0.95); } 
         
-        /* Compact Buttons */
-        .btn-group { display: flex; gap: 10px; justify-content: center; margin-bottom: 25px; flex-wrap: wrap; }
+        .btn-group { display: flex; gap: 8px; justify-content: center; margin-bottom: 25px; flex-wrap: wrap; }
         button { 
-            padding: 10px 18px; border: none; border-radius: 10px; cursor: pointer; 
-            font-weight: 700; font-size: 0.9rem; transition: all 0.3s ease; 
-            text-transform: uppercase; letter-spacing: 0.5px;
+            padding: 10px 15px; border: none; border-radius: 10px; cursor: pointer; 
+            font-weight: 700; font-size: 0.85rem; transition: all 0.3s ease; 
+            text-transform: uppercase; letter-spacing: 0.5px; flex: 1; min-width: 100px; color: white;
         }
-        .btn-refresh { background: linear-gradient(135deg, #1e90ff 0%, #5f27cd 100%); color: white; box-shadow: 0 5px 15px rgba(95, 39, 205, 0.3); }
-        .btn-copy { background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%); color: white; box-shadow: 0 5px 15px rgba(255, 71, 87, 0.3); }
+        .btn-refresh { background: linear-gradient(135deg, #1e90ff 0%, #5f27cd 100%); box-shadow: 0 5px 15px rgba(95, 39, 205, 0.3); }
+        .btn-random { background: linear-gradient(135deg, #ffa502 0%, #ff6348 100%); box-shadow: 0 5px 15px rgba(255, 165, 2, 0.3); }
+        .btn-copy { background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%); box-shadow: 0 5px 15px rgba(255, 71, 87, 0.3); }
         button:hover { transform: translateY(-3px); opacity: 0.9; }
         button:active { transform: translateY(1px); }
         
-        /* Inbox styling */
         .inbox { background: rgba(241, 242, 246, 0.9); padding: 15px; border-radius: 15px; border: 2px solid #dfe4ea; transition: 0.3s; }
         
         @keyframes pulseNewMail { 
@@ -124,12 +113,10 @@
         
         @keyframes pulseBadge { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
 
-        /* Message View */
         #messageView { display: none; text-align: left; background: #fff; border: 1px solid #dfe4ea; padding: 20px; border-radius: 15px; margin-top: 10px; }
         .back-btn { background: #ced6e0; color: #2f3542; padding: 8px 15px; margin-bottom: 15px; border-radius: 8px; font-weight: 700; border: none; cursor: pointer; font-size: 0.85rem; }
         .back-btn:hover { background: #5f27cd; color: white; }
         
-        /* Toast Notification */
         #toast { visibility: hidden; min-width: 250px; background: linear-gradient(to right, #2ed573, #1e90ff); color: #fff; text-align: center; border-radius: 20px; padding: 12px 20px; position: fixed; z-index: 1000; left: 50%; bottom: 20px; transform: translateX(-50%) translateY(20px); font-weight: 700; opacity: 0; transition: all 0.4s ease; font-size: 1rem; border: 2px solid #fff; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
         #toast.show { visibility: visible; opacity: 1; transform: translateX(-50%) translateY(0); }
         
@@ -137,11 +124,9 @@
         .empty-state span { font-size: 2.5rem; display: block; margin-bottom: 10px; animation: bounce 2s infinite; }
         @keyframes bounce { 0%, 20%, 50%, 80%, 100% { transform: translateY(0); } 40% { transform: translateY(-10px); } 60% { transform: translateY(-5px); } }
 
-        /* Footer */
         .footer { margin-top: 20px; padding-top: 15px; border-top: 2px dashed rgba(206, 214, 224, 0.8); font-size: 0.95rem; font-weight: 800; color: #2f3542; text-transform: uppercase; letter-spacing: 1px; }
         .footer span { color: #ff4757; font-size: 1.1rem; }
         
-        /* Custom Scrollbar */
         ::-webkit-scrollbar { width: 5px; height: 5px; }
         ::-webkit-scrollbar-track { background: #f1f2f6; border-radius: 10px; }
         ::-webkit-scrollbar-thumb { background: #5f27cd; border-radius: 10px; }
@@ -153,7 +138,7 @@
     <h1>TEMP MAIL PRO</h1>
     
     <div class="mail-generator">
-        <input type="text" id="usernameInput" placeholder="Custom name (e.g. sakib)">
+        <input type="text" id="usernameInput" placeholder="Custom name">
         
         <div class="dropdown" id="domainDropdown" onclick="toggleDropdown()">
             <div class="dropdown-selected" id="selectedDomainText">
@@ -171,7 +156,8 @@
     </div>
     
     <div class="btn-group">
-        <button class="btn-refresh" onclick="setNewMail()">🔄 CHANGE MAIL</button>
+        <button class="btn-refresh" onclick="setNewMail()">🔄 CHANGE</button>
+        <button class="btn-random" onclick="generateRandomMail()">🎲 RANDOM</button>
         <button class="btn-copy" onclick="copyMail()">📋 COPY</button>
     </div>
 
@@ -199,7 +185,6 @@
 </div>
 
 <div id="toast">✨ Copied!</div>
-
 <audio id="notificationSound" src="https://www.myinstants.com/media/sounds/ting.mp3" preload="auto"></audio>
 
 <script>
@@ -208,7 +193,7 @@
     let selectedDomainVal = "1secmail.com";
     let knownMessageIds = []; 
 
-    // ১. Page Load হওয়ার সাথে সাথেই ডোমেইন আনবে (Error-proof)
+    // ১. Page Load & Local Storage Check
     document.addEventListener("DOMContentLoaded", async () => {
         try {
             const res = await fetch("https://www.1secmail.com/api/v1/?action=getDomainList");
@@ -219,7 +204,7 @@
                 fallbackDomains();
             }
         } catch (e) {
-            fallbackDomains(); // API কাজ না করলে ব্যাকআপ ডোমেইন
+            fallbackDomains(); 
         }
     });
 
@@ -228,26 +213,34 @@
     }
 
     function populateDomains(domains) {
-        selectedDomainVal = domains[0];
-        document.getElementById("selectedDomainText").innerHTML = selectedDomainVal + ' <i style="font-style: normal; margin-left: 8px; font-size: 0.8rem;">▼</i>';
-        
         const dropdownOptions = document.getElementById("dropdownOptions");
         dropdownOptions.innerHTML = "";
         domains.forEach(domain => {
             dropdownOptions.innerHTML += `<div class="dropdown-option" onclick="selectDomain('${domain}')">${domain}</div>`;
         });
-        setNewMail(); // ডোমেইন রেডি হলে মেইল তৈরি করবে
+
+        // Local Storage থেকে আগের মেইল চেক করা
+        let savedUser = localStorage.getItem("tempMailUser");
+        let savedDomain = localStorage.getItem("tempMailDomain");
+
+        if (savedUser && savedDomain && domains.includes(savedDomain)) {
+            document.getElementById("usernameInput").value = savedUser;
+            selectedDomainVal = savedDomain;
+            document.getElementById("selectedDomainText").innerHTML = savedDomain + ' <i style="font-style: normal; margin-left: 8px; font-size: 0.8rem;">▼</i>';
+            setNewMail(false); // false মানে নতুন করে রেন্ডম নাম বানাবে না, সেভ করাটাই নেবে
+        } else {
+            selectedDomainVal = domains[0];
+            document.getElementById("selectedDomainText").innerHTML = selectedDomainVal + ' <i style="font-style: normal; margin-left: 8px; font-size: 0.8rem;">▼</i>';
+            generateRandomMail(); 
+        }
     }
 
-    // Dropdown Animation
-    function toggleDropdown() {
-        document.getElementById("domainDropdown").classList.toggle("active");
-    }
+    function toggleDropdown() { document.getElementById("domainDropdown").classList.toggle("active"); }
 
     function selectDomain(domain) {
         selectedDomainVal = domain;
         document.getElementById("selectedDomainText").innerHTML = domain + ' <i style="font-style: normal; margin-left: 8px; font-size: 0.8rem;">▼</i>';
-        setNewMail();
+        setNewMail(true); // true মানে ইনপুট থেকে নাম নেবে
     }
 
     window.addEventListener('click', function(e) {
@@ -256,18 +249,32 @@
         }
     });
 
-    // ২. Notun Mail Set Kora
-    function setNewMail() {
+    // ২. Random Mail Button Logic
+    function generateRandomMail() {
+        let randomString = Math.random().toString(36).substring(2, 10);
+        document.getElementById("usernameInput").value = randomString;
+        setNewMail(true);
+    }
+
+    // ৩. Set Mail and Save to Local Storage
+    function setNewMail(readFromInput = true) {
         let user = document.getElementById("usernameInput").value.trim().toLowerCase().replace(/[^a-z0-9]/g, '');
         
-        if (!user) {
-            user = Math.random().toString(36).substring(2, 10);
-            document.getElementById("usernameInput").value = user;
+        if (!user || !readFromInput) {
+            user = document.getElementById("usernameInput").value; 
+            if(!user) {
+                user = Math.random().toString(36).substring(2, 10);
+                document.getElementById("usernameInput").value = user;
+            }
         }
         
         currentEmail = `${user}@${selectedDomainVal}`;
         document.getElementById("mailAddress").innerText = currentEmail;
         knownMessageIds = []; 
+        
+        // Save to Local Storage (যেন রিলোড দিলে না হারায়)
+        localStorage.setItem("tempMailUser", user);
+        localStorage.setItem("tempMailDomain", selectedDomainVal);
         
         backToInbox();
         checkInbox();
@@ -276,19 +283,16 @@
         checkInterval = setInterval(checkInbox, 5000);
     }
 
-    // ৩. Copy Animation
     function copyMail() {
         navigator.clipboard.writeText(currentEmail);
         const mailBox = document.getElementById("mailAddress");
         mailBox.style.transform = "scale(0.95)";
         setTimeout(() => mailBox.style.transform = "scale(1)", 150);
-
         const toast = document.getElementById("toast");
         toast.className = "show";
         setTimeout(() => { toast.className = toast.className.replace("show", ""); }, 2000);
     }
 
-    // ৪. Inbox Check & Sound Alert
     async function checkInbox() {
         if (!currentEmail || currentEmail.includes("Loading")) return;
         const [login, domain] = currentEmail.split("@");
@@ -333,7 +337,6 @@
         }
     }
 
-    // ৫. Open Message
     async function readMessage(msgId) {
         const [login, domain] = currentEmail.split("@");
         document.getElementById("emailList").style.display = "none";
@@ -343,7 +346,6 @@
         try {
             const res = await fetch(`https://www.1secmail.com/api/v1/?action=readMessage&login=${login}&domain=${domain}&id=${msgId}`);
             const msgData = await res.json();
-            
             document.getElementById("msgSubject").innerText = msgData.subject || 'No Subject';
             document.getElementById("msgSender").innerText = `From: ${msgData.from}`;
             
@@ -364,7 +366,7 @@
     }
 
     document.getElementById("usernameInput").addEventListener("keypress", function(event) {
-        if (event.key === "Enter") { setNewMail(); }
+        if (event.key === "Enter") { setNewMail(true); }
     });
 </script>
 
